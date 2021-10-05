@@ -13,5 +13,14 @@ class Movie
     public $author = 'Gino';
     public $duration = '1H:28M';
     public $description = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque optio odit pariatur quo in saepe architecto, dolores quam. Nesciunt explicabo exercitationem, quae nemo aliquid consequuntur perferendis maiores natus ullam saepe.';
+
+    public function __construct($_title, $_author, $_duration, $_description)
+    {
+        $this->title =  $_title;
+        $this->author = $_author;
+        $this->duration = $_duration;
+        $this->description = $_description;
+    }
 }
+
 ?>
