@@ -19,19 +19,19 @@ class Movie
 
     public function print()
     {
-        echo $this->title;
-        echo $this->author;
-        echo $this->duration;
-        echo $this->description;
+        echo $this->title  . '</br>';
+        echo $this->author  . '</br>';
+        echo $this->duration  . '</br>';
+        echo $this->description  . '</br>';
     }
 
     //* CONSTRUCT
     public function __construct($_title, $_author, $_duration, $_description)
     {
-        $this->title =  $_title . '</br>';
-        $this->author = $_author . '</br>';
-        $this->duration = $_duration . '</br>';
-        $this->description = $_description . '</br>';
+        $this->title =  $_title;
+        $this->author = $_author;
+        $this->duration = $_duration;
+        $this->description = $_description;
     }
 }
 
