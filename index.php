@@ -9,18 +9,40 @@
 // creazione classe Moovie
 class Movie
 {
-    public $title = 'Ritorno al futuro';
-    public $author = 'Gino';
-    public $duration = '1H:28M';
-    public $description = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque optio odit pariatur quo in saepe architecto, dolores quam. Nesciunt explicabo exercitationem, quae nemo aliquid consequuntur perferendis maiores natus ullam saepe.';
+    //* PROPERTIES
+    public $title;
+    public $author;
+    public $duration;
+    public $description;
 
+    //* METHODS
+
+    public function print()
+    {
+        echo $this->title;
+        echo $this->author;
+        echo $this->duration;
+        echo $this->description;
+    }
+
+    //* CONSTRUCT
     public function __construct($_title, $_author, $_duration, $_description)
     {
-        $this->title =  $_title;
-        $this->author = $_author;
-        $this->duration = $_duration;
-        $this->description = $_description;
+        $this->title =  $_title . '</br>';
+        $this->author = $_author . '</br>';
+        $this->duration = $_duration . '</br>';
+        $this->description = $_description . '</br>';
     }
 }
+
+
+
+//* CREAZIONE ISTANZE
+$film1 = new Movie('Harry Potter', 'J.K.Rowling', '2h', 'proprio bello');
+$film2 = new Movie('Iron Man', 'Marvel', '2h', 'Troppo bello');
+//* stampa classi con metodo inserito in esse
+$film1->print();
+$film2->print();
+
 
 ?>
